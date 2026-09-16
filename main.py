@@ -1,5 +1,6 @@
 import pandas as pd
 from analyzer import get_total, get_category_totals, get_top_category
+from visualization import show_category_chart
 
 # Load the expenses
 df = pd.read_csv("data/expenses.csv")
@@ -17,3 +18,6 @@ print("\nExpenses by category:")
 print(category_totals)
 
 print(f"\nTop category: {top_category}")
+
+# Display the chart
+show_category_chart(category_totals)
